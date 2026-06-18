@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TJ Stream</string>
+    <string name="playing">Playing...</string>
+    <string name="loading">Loading stream...</string>
+</resources>

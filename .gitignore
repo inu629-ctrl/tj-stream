@@ -1,0 +1,52 @@
+# Gradle files
+.gradle/
+build/
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Local configuration file
+local.properties
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Kotlin
+kotlin-build/
+
+# Binaries
+*.jar
+*.class
+*.so
+*.exe
+*.dll
+*.dylib
+
+# Generated files
+bin/
+out/
+
+# Android
+.Android
+/captures/
+.externalNativeBuild
+.cxx/
+
+# Misc
+*.log
+.classpath
+.factorypath
+.mtj.tmp/
+*.ear
+*.zip
+*.tar.gz
+*.rar
+pom.xml.asc
+
+# Virtual machine crash logs
+hs_err_pid*
