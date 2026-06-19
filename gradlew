@@ -36,7 +36,7 @@ while [ -h "$PRG" ] ; do
     fi
 done
 SAVED="`pwd`"
-cd "`dirname \"$PRG\"`/" >/dev/null
+cd "`dirname "$PRG"`/" >/dev/null
 APP_HOME="`pwd -P`"
 cd "$SAVED" >/dev/null
 
@@ -49,11 +49,11 @@ DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
 
-warn () {
+warn() {
     echo "$*"
 }
 
-die () {
+die() {
     echo
     echo "$*"
     echo
@@ -147,14 +147,14 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
 fi
 
 # Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules
-function splitJvmOpts() {
+splitJvmOpts() {
     JVM_OPTS=("$@")
 }
 eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS
 JVM_OPTS[${#JVM_OPTS[*]}]="-Dorg.gradle.appname=$APP_BASE_NAME"
 
 # by default we should be in the correct project dir, but when run from Gradle itself we might be in the root
-if [ "$(pwd)" == "/" ] ; then
+if [ "$(pwd)" = "/" ] ; then
   cd "$(dirname "$0")"
   if [ -z "$CLASSPATH" ] ; then
     CLASSPATH="."
