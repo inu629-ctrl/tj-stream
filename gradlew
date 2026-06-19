@@ -32,7 +32,7 @@ while [ -h "$PRG" ] ; do
     if expr "$link" : '/.*' > /dev/null; then
         PRG="$link"
     else
-        PRG=`dirname "$PRG"`"/$link"
+        PRG=`dirname "$PRG"`"/"$link"
     fi
 done
 SAVED="`pwd`"
@@ -137,7 +137,7 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
         SEP=":"
     done
     OURCYGPATTERN="(^($ROOTDIR))"
-    OURCYGPATTERN="$OURCYGPATTERN|(^)(/)(usr)(/)(local)(/)(bin)(/)(gradle)(/)"
+    OURCYGPATTERN="$OURCYGPATTERN|(^)(/)/(usr)(/)/(local)(/)/(bin)(/)/(gradle)(/)"
     if GRADLE_CYGPATTERN=`echo $CLASSPATH | sed -n "s/.*$OURCYGPATTERN.*/\1/p"` ; then
         CLASSPATH=`echo $CLASSPATH | sed -e "s/$OURCYGPATTERN/\1\2/g"`
     fi
